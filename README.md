@@ -195,6 +195,7 @@ docker compose -f platform.docker-compose.yml down
 ## Demo
 
 This is a quick end-to-end flow you can run in Swagger UI.
+![alt text](swagger.png)
 
 ### 1) Add a stock
 
@@ -231,10 +232,34 @@ Sample response:
 ```json
 [
   {
+    "symbol": "ICE",
+    "currentPrice": 156.21,
+    "previousClose": 156.3,
+    "growthPercent": -0.06
+  },
+  {
     "symbol": "AAPL",
-    "currentPrice": 189.12,
-    "previousClose": 186.4,
-    "growthPercent": 1.46
+    "currentPrice": 270.17,
+    "previousClose": 270.71,
+    "growthPercent": -0.2
+  },
+  {
+    "symbol": "TSLA",
+    "currentPrice": 372.82,
+    "previousClose": 376.02,
+    "growthPercent": -0.85
+  },
+  {
+    "symbol": "TW",
+    "currentPrice": 116.18,
+    "previousClose": 118.12,
+    "growthPercent": -1.64
+  },
+  {
+    "symbol": "NVDA",
+    "currentPrice": 205.41,
+    "previousClose": 209.25,
+    "growthPercent": -1.84
   }
 ]
 ```
@@ -256,3 +281,4 @@ dotnet test
 ## Notes and Limitations
 
 - Artificial intelligence tools were used in the project.
+- I added Docker support, but I couldn’t test it because Docker crashed on my computer; I ran the program locally.
