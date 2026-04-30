@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using FinancialTracker.Api.DTOs.Requests;
 using FinancialTracker.Api.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;

@@ -10,10 +10,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("75f50e21-f0dc-4f0b-bfde-f3f08d30401a")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("FinancialTracker.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f420b1b9388d87f0e2cb73ebf845bbd81e887f2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+87207174bc96ad0db055d6b556b7ea5b73f0faf1")]
 [assembly: System.Reflection.AssemblyProductAttribute("FinancialTracker.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FinancialTracker.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
