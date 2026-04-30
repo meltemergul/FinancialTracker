@@ -1,12 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace FinancialTracker.Api.Middleware
 {
-
-
     public class GlobalExceptionMiddleware
     {
         private readonly RequestDelegate _next;

@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using FinancialTracker.Api.Data;
 using FinancialTracker.Api.Models;
 using FinancialTracker.Api.Repositories.Interfaces;

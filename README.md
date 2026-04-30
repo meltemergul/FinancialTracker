@@ -5,6 +5,7 @@ A .NET Web API project that tracks stock prices from an external financial API, 
 ## Project Purpose
 
 This project simulates a simple internal finance tool where users can:
+
 - maintain a stock watchlist,
 - fetch live quote data from an external provider,
 - persist historical snapshots,
@@ -12,11 +13,11 @@ This project simulates a simple internal finance tool where users can:
 
 ## Tech Stack
 
-- Backend: ASP.NET Core Web API (`net10.0`, satisfies ".NET 6 or later")
+- Backend: ASP.NET Core Web API
 - Database: SQLite + Entity Framework Core
 - External API: Finnhub
 - API Documentation: Swagger / OpenAPI
-- Testing: xUnit (optional bonus, add in test project)
+- Testing: xUnit
 
 ## Why Finnhub and SQLite?
 
@@ -43,6 +44,7 @@ The solution separates concerns into clear layers:
 The project uses the Repository Pattern in the repository layer to abstract EF Core access from service logic.
 
 Why this was chosen:
+
 - keeps business rules out of controllers and persistence details out of services,
 - improves testability (repositories can be mocked),
 - supports cleaner, maintainable architecture.
@@ -84,9 +86,11 @@ This provides a practical aggregation view for identifying short-term outperform
 Global exception middleware returns JSON error payloads and prevents raw exception leakage.
 
 Current implementation returns:
+
 - `500 Internal Server Error` with `{ "error": "Unexpected server error." }` for unhandled exceptions
 
 Recommended extension (for stronger evaluation):
+
 - map validation errors to `400`,
 - missing resources to `404`,
 - external API failures to `502`.
@@ -111,6 +115,7 @@ dotnet restore
 ### 3) Configure Finnhub API key
 
 Set your API key in:
+
 - `FinancialTracker.Api/appsettings.Development.json` (preferred), or
 - `FinancialTracker.Api/appsettings.json`
 
@@ -139,6 +144,7 @@ dotnet run --project FinancialTracker.Api
 ```
 
 Open Swagger using the active local port:
+
 - `http://localhost:<port>/swagger`
 - or `https://localhost:<port>/swagger`
 
@@ -147,6 +153,7 @@ Use the terminal line `Now listening on ...` to confirm exact URL.
 ## Docker Support
 
 The project includes:
+
 - `FinancialTracker.Api/Dockerfile`
 - `platform.docker-compose.yml`
 
@@ -169,6 +176,7 @@ docker compose -f platform.docker-compose.yml up --build
 ```
 
 API will be available at:
+
 - `http://localhost:8080/swagger`
 
 ### Stop containers
@@ -225,7 +233,7 @@ Sample response:
   {
     "symbol": "AAPL",
     "currentPrice": 189.12,
-    "previousClose": 186.40,
+    "previousClose": 186.4,
     "growthPercent": 1.46
   }
 ]
@@ -247,6 +255,4 @@ dotnet test
 
 ## Notes and Limitations
 
-- Finnhub free tier has rate limits.
-- If API key is missing/invalid, stock fetch requests will fail.
-- Current exception middleware is intentionally simple; extending status code mapping improves production readiness.
+- Artificial intelligence tools were used in the project.

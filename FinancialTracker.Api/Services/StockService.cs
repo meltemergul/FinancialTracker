@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using FinancialTracker.Api.Clients.Interfaces;
 using FinancialTracker.Api.DTOs.Responses;
 using FinancialTracker.Api.Models;
@@ -35,7 +31,7 @@ namespace FinancialTracker.Api.Services
             var stock = new Stock
             {
                 Symbol = symbol,
-                CompanyName = symbol // keep simple; optionally call profile endpoint later
+                CompanyName = symbol
             };
             await _stockRepository.AddAsync(stock, ct);
             await _stockRepository.SaveChangesAsync(ct);

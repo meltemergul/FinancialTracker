@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text.Json;
-using System.Threading.Tasks;
 using FinancialTracker.Api.Clients.Interfaces;
 
 namespace FinancialTracker.Api.Clients
@@ -27,7 +23,7 @@ namespace FinancialTracker.Api.Clients
                 throw new HttpRequestException($"Finnhub request failed with status {response.StatusCode}.");
             var json = await response.Content.ReadAsStringAsync(ct);
             using var doc = JsonDocument.Parse(json);
-            // Finnhub fields: c = current, pc = previous close
+
             var root = doc.RootElement;
             var current = root.GetProperty("c").GetDecimal();
             var prevClose = root.GetProperty("pc").GetDecimal();
