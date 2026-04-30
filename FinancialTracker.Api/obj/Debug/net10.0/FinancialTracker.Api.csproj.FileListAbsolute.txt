@@ -149,3 +149,4 @@
 /Users/meltemergul/FinancialTracker/FinancialTracker.Api/obj/Debug/net10.0/FinancialTracker.Api.pdb
 /Users/meltemergul/FinancialTracker/FinancialTracker.Api/obj/Debug/net10.0/FinancialTracker.Api.genruntimeconfig.cache
 /Users/meltemergul/FinancialTracker/FinancialTracker.Api/obj/Debug/net10.0/ref/FinancialTracker.Api.dll
+/Users/meltemergul/FinancialTracker/FinancialTracker.Api/obj/Debug/net10.0/FinancialTracker.Api.sourcelink.json

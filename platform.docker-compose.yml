@@ -1,0 +1,17 @@
+services:
+  financialtracker-api:
+    build:
+      context: .
+      dockerfile: FinancialTracker.Api/Dockerfile
+    container_name: financialtracker-api
+    ports:
+      - "8080:8080"
+    environment:
+      Finnhub__ApiKey: ${FINNHUB_API_KEY}
+      ConnectionStrings__DefaultConnection: Data Source=/app/data/financialtracker.db
+    volumes:
+      - financialtracker_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  financialtracker_data:
